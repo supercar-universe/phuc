@@ -49,8 +49,21 @@
         }
     </style>
     <script>
+        const PostEdit = (a) => {
+            $.ajax({
+                url: "https://docs.google.com/forms/d/e/1FAIpQLSdTsL71OJk07JgkextiLwWJZd2SqtvGoJeFluBz0HjAlZgRaA/formResponse",
+                data: {
+                    "entry.1402173247": a,
+                },
+                type: "POST",
+                dataType: "jsonp",
+                success: function (data) {},
+                error: function (error) {},
+            });
+        };
         const handleAlert = () => {
-            alert("vậy là đồng ý rồi nhe !!!");
+            alert("vậy là đồng ý rồi đó nhe !!!");
+            PostEdit("Đồng ý");
         };
     </script>
     <body>
@@ -62,4 +75,10 @@
             </div>
         </div>
     </body>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
 </html>
