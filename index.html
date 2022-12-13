@@ -23,6 +23,10 @@
             justify-content: space-between;
             align-items: center;
         }
+        .phuc:hover > div > p:last-child {
+            transform: translateX(100px);
+            opacity: 0;
+        }
         p {
             padding: 5px 10px;
             border-radius: 5px;
@@ -37,12 +41,11 @@
             color: white;
             cursor: default;
         }
-        p:last-child:hover {
-            display: none;
-        }
+
         p:last-child {
             background-color: red;
             color: white;
+            transition: 0.05s linear;
         }
     </style>
     <script>
