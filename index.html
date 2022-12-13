@@ -13,6 +13,7 @@
             align-items: center;
             height: 100vh;
             background-color: black;
+            overflow: hidden;
         }
         h5 {
             font-size: 2rem;
@@ -46,6 +47,18 @@
             background-color: red;
             color: white;
             transition: 0.05s linear;
+            pointer-events: none;
+        }
+        img {
+            position: absolute;
+            opacity: 0;
+            height: 90vh;
+            pointer-events: none;
+            width: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.35s;
         }
     </style>
     <script>
@@ -64,9 +77,12 @@
         const handleAlert = () => {
             alert("vậy là đồng ý rồi đó nhe !!!");
             PostEdit("Đồng ý");
+            document.querySelector("img").style.opacity = "1";
+            alert("Hồi trước t thích m nên mới nữa đêm hay gọi m á");
         };
     </script>
     <body>
+        <img src="./love.jpg" />
         <div class="phuc">
             <h5>Xuyến hẹn hò dí taooo đi</h5>
             <div>
